@@ -1,0 +1,36 @@
+<div class="body">
+<div *ngIf="logged === false" class="formular">
+<div class="nadpis">
+  Welcome!
+</div>
+<img src="https://www.gamerzroyale.com/images/avatar/user.jpg">
+
+<form>
+  <div class="a">
+    Username
+  </div>
+  <div>
+  <input type="text" name="username" [(ngModel)]="username" placeholder="Enter username"/>
+  </div>
+  <div class="a">
+    Password
+  </div>
+  <div>
+  <input type="password" name="password" [(ngModel)]="password" placeholder="Enter password"/>
+  </div>
+</form>
+
+<button (click)="clickedButton()">Log in</button>
+
+<div class="alert2">
+  {{ alert2 }}
+</div>  
+</div>
+
+<div *ngIf="logged === true" class="alert">
+  {{ alert }}
+</div>
+
+<button *ngIf="logged === true" (click)="backButton()">Log out</button>
+
+</div>
